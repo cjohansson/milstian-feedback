@@ -1,0 +1,9 @@
+[package]
+name = "milstian-logger"
+version = "0.1.0"
+authors = ["Christian Johansson <christian@cvj.se>"]
+license = "GPL-3.0-only"
+repository = "https://github.com/cjohansson/milstian-logger"
+
+[dependencies]
+chrono = "0.4"
