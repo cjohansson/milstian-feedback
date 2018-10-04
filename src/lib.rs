@@ -1,5 +1,5 @@
 //! # Milstian Feedback
-//! Used to handle logging of various types of messages.
+//! Used to handle feedback of various types of messages.
 
 extern crate chrono;
 use chrono::offset::Utc;
