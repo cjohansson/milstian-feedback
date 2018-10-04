@@ -1,31 +1,34 @@
-extern crate chrono;
-use chrono::offset::Utc;
-
 //! # Milstian Feedback
 //! Used to handle logging of various types of messages.
 
-pub struct Logger;
+extern crate chrono;
+use chrono::offset::Utc;
 
-impl Logger {
+pub struct Feedback;
+
+impl Feedback {
     /// # Output information
     /// ```rust,dont_run
-    /// Logger::info("We have information".to_string());
+    /// use milstian_feedback::Feedback;
+    /// Feedback::info("We have information".to_string());
     /// ```
     pub fn info(message: String) {
-        println!("{}", Logger::format_message(message));
+        println!("{}", Feedback::format_message(message));
     }
 
     /// # Output error
     /// ```rust,dont_run
-    /// Logger::error("We have a undefined error".to_string());
+    /// use milstian_feedback::Feedback;
+    /// Feedback::error("We have a undefined error".to_string());
     /// ```
     pub fn error(message: String) {
-        eprintln!("{}", Logger::format_message(message));
+        eprintln!("{}", Feedback::format_message(message));
     }
 
     /// # Format message with timestamp
     /// ```rust
-    /// let message = Logger::format("Important stuff".to_string());
+    /// use milstian_feedback::Feedback;
+    /// let message = Feedback::format_message("Important stuff".to_string());
     /// assert!(message.contains("stuff"));
     /// ```
     pub fn format_message(message: String) -> String {
@@ -38,6 +41,6 @@ mod tests {
     use super::*;
     #[test]
     fn format_message() {
-        assert!(Logger::format_message("random".to_string()).contains("random"));
+        assert!(Feedback::format_message("random".to_string()).contains("random"));
     }
 }
