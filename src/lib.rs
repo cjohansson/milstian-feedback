@@ -4,6 +4,7 @@
 extern crate chrono;
 use chrono::offset::Utc;
 
+#[derive(Clone, Debug)]
 pub struct Feedback
 {
     _error_file: Option<String>,
